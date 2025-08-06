@@ -3,23 +3,28 @@
 /**
  * Module dependencies.
  */
+import app from '../app.js';
+import debugLib from 'debug';
+import http from 'http';
 
-var app = require('../app');
-var debug = require('debug')('crowd-sourced-feedback:server');
-var http = require('http');
+const debug = debugLib('crowd-sourced-feedback:server');
+
+// var app = require('../app');
+// var debug = require('debug')('crowd-sourced-feedback:server');
+// var http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+const server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
