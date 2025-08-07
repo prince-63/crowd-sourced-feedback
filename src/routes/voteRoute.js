@@ -1,7 +1,7 @@
 import express from 'express';
 import jwtTokenValidator from "../middlewares/jwtTokenValidator.js";
 import VoteApiConstant from "../constants/VoteApiConstant.js";
-import VoteController from "../src/controller/VoteController.js";
+import VoteController from "../controller/VoteController.js";
 
 const router = express.Router();
 

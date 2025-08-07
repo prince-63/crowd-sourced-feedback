@@ -1,9 +1,9 @@
 import express from 'express';
 import UserApiConstant from "../constants/UserApiConstant.js";
-import UserController from "../src/controller/UserController.js";
+import UserController from "../controller/UserController.js";
 import validateBody from "../middlewares/validateBody.js";
-import RegisterRequestDTO from "../src/dto/RegisterRequestDTO.js";
-import LoginRequestDTO from "../src/dto/LoginRequestDTO.js";
+import RegisterRequestDTO from "../dto/RegisterRequestDTO.js";
+import LoginRequestDTO from "../dto/LoginRequestDTO.js";
 import jwtTokenValidator from "../middlewares/jwtTokenValidator.js";
 
 const router = express.Router();

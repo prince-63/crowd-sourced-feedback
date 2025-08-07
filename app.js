@@ -2,9 +2,9 @@ import createError from 'http-errors';
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
-import userRoute from './routes/userRoute.js';
-import productRoute from './routes/productRoute.js';
-import voteRoute from './routes/voteRoute.js';
+import userRoute from './src/routes/userRoute.js';
+import productRoute from './src/routes/productRoute.js';
+import voteRoute from './src/routes/voteRoute.js';
 
 const app = express();
 

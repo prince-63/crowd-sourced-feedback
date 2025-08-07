@@ -1,6 +1,6 @@
 import ApplicationConstants from "../constants/ApplicationConstants.js";
-import ErrorResponseDTO from "../src/dto/ErrorResponseDTO.js";
-import jwtHelper from "../src/utils/JwtHelper.js";
+import ErrorResponseDTO from "../dto/ErrorResponseDTO.js";
+import jwtHelper from "../utils/JwtHelper.js";
 
 const jwtTokenValidator = async (req, res, next) => {
     const token = req.header(ApplicationConstants.AUTHORIZATION);

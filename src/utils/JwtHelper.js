@@ -1,5 +1,5 @@
 import pkg from 'jsonwebtoken';
-import ApplicationConstants from "../../constants/ApplicationConstants.js";
+import ApplicationConstants from "../constants/ApplicationConstants.js";
 import jwt from "jsonwebtoken";
 
 const {sign} = pkg;

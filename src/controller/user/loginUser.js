@@ -2,7 +2,7 @@ import UserService from "../../services/UserService.js";
 import LoginResponseDTO from "../../dto/LoginResponseDTO.js";
 import ResponseDTO from "../../dto/ResponseDTO.js";
 import jwtHelper from "../../utils/JwtHelper.js";
-import ApplicationConstants from "../../../constants/ApplicationConstants.js";
+import ApplicationConstants from "../../constants/ApplicationConstants.js";
 import ErrorMapper from "../../mapper/ErrorMapper.js";
 
 const loginUser = async (req, res) => {

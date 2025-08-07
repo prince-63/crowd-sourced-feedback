@@ -1,5 +1,5 @@
 import {validate} from "bean-validator";
-import ErrorResponseDTO from "../src/dto/ErrorResponseDTO.js"
+import ErrorResponseDTO from "../dto/ErrorResponseDTO.js"
 
 const validateBody = (DtoClass) => {
     return async (req, res, next) => {
