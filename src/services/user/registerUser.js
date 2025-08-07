@@ -1,7 +1,7 @@
 import UserRepository from "../../repositories/UserRepository.js";
 import bcrypt from "bcrypt";
 
-const SALT_ROUND = process.env.SALT_ROUND || 12;
+const SALT_ROUND = parseInt(process.env.SALT_ROUND) || 12;
 
 const registerUser = async (userData) => {
 
