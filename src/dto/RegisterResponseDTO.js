@@ -1,9 +1,4 @@
 class RegisterResponseDTO {
-    id;
-    name;
-    email;
-    role;
-
     constructor(id, name, email, role) {
         this.id = id;
         this.name = name;
