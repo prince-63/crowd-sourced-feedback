@@ -23,7 +23,9 @@ const jwtTokenValidator = async (req, res, next) => {
         userId: payload.userId,
         email: payload.email,
         role: payload.role,
+        ...req.body,
     };
+
     next();
 }
 
