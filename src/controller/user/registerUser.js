@@ -16,15 +16,15 @@ const registerUser = async (req, res) => {
             savedUser.role
         );
 
-        res.status(200).json(new ResponseDTO("Successfully registered", responseData));
+        res.status(200).send(new ResponseDTO("Successfully registered", responseData));
     }
     catch (error) {
         const errorResponse = new ErrorResponseDTO(
             req.path,
-            400,
+            500,
             error.message
         )
-        res.status(400).json(errorResponse);
+        res.status(500).send(errorResponse);
     }
 }
 
