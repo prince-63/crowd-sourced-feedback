@@ -17,7 +17,7 @@ const loginUser = async (req, res) => {
             token
         );
 
-        res.header(ApplicationConstants.AUTHENTICATION, token);
+        res.header(ApplicationConstants.AUTHORIZATION, token);
         res.status(200).send(new ResponseDTO("Logged Successfully.", responseData));
     }
     catch (error) {
