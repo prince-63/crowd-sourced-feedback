@@ -4,10 +4,12 @@ import UserController from "../src/controller/UserController.js";
 import validateBody from "../middlewares/validateBody.js";
 import RegisterRequestDTO from "../src/dto/RegisterRequestDTO.js";
 import LoginRequestDTO from "../src/dto/LoginRequestDTO.js";
+import jwtTokenValidator from "../middlewares/jwtTokenValidator.js";
 
 const router = express.Router();
 
 router.post(UserApiConstant.REGISTER_USER, validateBody(RegisterRequestDTO), UserController.registerUser);
 router.post(UserApiConstant.LOGIN_USER, validateBody(LoginRequestDTO), UserController.loginUser);
+router.get(UserApiConstant.GET_USER, jwtTokenValidator, UserController.getUser);
 
 export default router;
