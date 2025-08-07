@@ -4,7 +4,7 @@ import ErrorMapper from "../../mapper/ErrorMapper.js";
 import UserMapper from "../../mapper/UserMapper.js";
 
 const getUser = async (req, res) => {
-    const { email } = req.body;
+    const { email } = req.params;
     try {
         const user = await UserService.getUser(email);
         const userResponseDTO = UserMapper.mapToUserResponseDTO(user);
