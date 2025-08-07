@@ -1,5 +1,6 @@
 import pkg from 'jsonwebtoken';
 import ApplicationConstants from "../../constants/ApplicationConstants.js";
+import jwt from "jsonwebtoken";
 
 const {sign} = pkg;
 
@@ -18,6 +19,10 @@ class JwtHelper {
         }, JWT_SECRET_KEY, {
             algorithm: 'HS256'
         });
+    }
+
+    static verifyToken(token) {
+        return jwt.verify(token, JWT_SECRET_KEY);
     }
 
 }
