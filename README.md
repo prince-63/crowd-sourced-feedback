@@ -36,7 +36,7 @@ JWT_SECRET=your_jwt_secret
 PORT=5000
 ```
 
-## 📖 API Documentation
+### API Documentation
 
 Once the server is running, API documentation is available at:
 
