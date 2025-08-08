@@ -5,6 +5,7 @@ import logger from 'morgan';
 import userRoute from './src/routes/userRoute.js';
 import productRoute from './src/routes/productRoute.js';
 import voteRoute from './src/routes/voteRoute.js';
+import commentRoute from './src/routes/commentRoute.js';
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(cookieParser());
 app.use(userRoute);
 app.use(productRoute);
 app.use(voteRoute);
+app.use(commentRoute);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
