@@ -1,5 +1,4 @@
 import client from "../config/prisma.js";
-import ErrorMapper from "../mapper/ErrorMapper.js";
 
 class VoteRepository {
     constructor() {}
@@ -21,6 +20,15 @@ class VoteRepository {
             }
         })
     }
+
+    static async removeVote(voteId) {
+        return client.vote.delete({
+            where: {
+                id: voteId,
+            }
+        })
+    }
+
 }
 
 export default VoteRepository;
