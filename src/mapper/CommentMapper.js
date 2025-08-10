@@ -11,6 +11,17 @@ class CommentMapper {
             comment.createdAt
         )
     }
+
+    static mapToListProductCommentsDTO(comments) {
+        return comments.map(comment => new CommentResponseDTO(
+            comment.id,
+            comment.content,
+            comment.productId,
+            comment.authorId,
+            comment.isPinned,
+            comment.createdAt
+        ));
+    }
 }
 
 export default CommentMapper;
