@@ -13,6 +13,18 @@ class ProductMapper {
             product.creatorId
         );
     }
+
+    static toListProductsDTO(products) {
+        return products.map(product => new ProductResponseDTO(
+            product.id,
+            product.title,
+            product.description,
+            product.link,
+            product.creatorId,
+            product.comments,
+            product.votes
+        ));
+    }
 }
 
 export default ProductMapper;

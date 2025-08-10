@@ -8,5 +8,7 @@ import ProductRequestDTO from "../dto/ProductRequestDTO.js";
 const router = express.Router();
 
 router.post(ProductApiConstant.POST_PRODUCT, jwtTokenValidator, validateBody(ProductRequestDTO), ProductController.postProduct);
+router.get(ProductApiConstant.GET_ALL_PRODUCTS, ProductController.getAllProducts);
+router.get(ProductApiConstant.GET_NEXT_PRODUCTS_LIST, ProductController.getNextProductLists);
 
 export default router;
