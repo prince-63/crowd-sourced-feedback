@@ -13,6 +13,17 @@ class CommentRepository {
         })
     }
 
+    static async getAllCommentsByProductId(productId) {
+        return client.comment.findMany({
+            where: {
+                productId: productId,
+            },
+            orderBy: {
+                createdAt: 'desc',
+            }
+        })
+    }
+
 }
 
 export default CommentRepository;
